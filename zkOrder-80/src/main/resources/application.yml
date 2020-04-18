@@ -1,0 +1,9 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: Order
+  cloud:
+    zookeeper:
+      connect-string: Cying.com:2181

@@ -1,0 +1,15 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: Order
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://cying.com:7001/eureka,http://cying.com:7002/eureka
+  instance:
+    instance-id: order-80

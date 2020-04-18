@@ -1,0 +1,15 @@
+server:
+  port: 7002
+
+spring:
+  application:
+    name: Eureka-7002
+
+eureka:
+  instance:
+    hostname: Cying.com:7002
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://cying.com:7001/eureka

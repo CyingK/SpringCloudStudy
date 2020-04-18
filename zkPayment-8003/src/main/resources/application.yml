@@ -1,0 +1,9 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: Payment
+  cloud:
+    zookeeper:
+      connect-string: Cying.com:2181

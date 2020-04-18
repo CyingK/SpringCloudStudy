@@ -1,0 +1,12 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: HystrixOrder
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://Cying.com:7001/eureka/
