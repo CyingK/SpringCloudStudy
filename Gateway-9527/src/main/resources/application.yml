@@ -1,0 +1,26 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: Gateway
+  cloud:
+    gateway:
+      routes:
+        - id: payment_route1
+          uri: http://Cying.com:8001
+          predicates:
+            - Path=/payment/get/**
+        - id: payment_route2
+          uri: http://Cying.com:8001
+          predicates:
+            - Path=/payment/sleep
+
+eureka:
+  instance:
+    hostname: Gateway
+  client:
+    service-url:
+      defaultZone: http://Cying.com:7001/eureka/
+    register-with-eureka: true
+    fetch-registry: true

@@ -21,6 +21,8 @@
     <module>HystrixOrder-80</module>
     <module>HystrixPayment-8001</module>
     <module>OpenFeignOrder-80</module>
+    <module>HystrixDashBoard-9001</module>
+    <module>Gateway-9527</module>
   </modules>
   <packaging>pom</packaging>
 
