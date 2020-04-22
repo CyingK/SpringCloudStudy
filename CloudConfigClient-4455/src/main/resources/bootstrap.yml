@@ -1,0 +1,17 @@
+server:
+  port: 4455
+
+spring:
+  application:
+    name: Cloud-Config-Client
+  cloud:
+    config:
+      label: master
+      name: config
+      profile: dev
+      uri: http://Cying.com:3344
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://Cying.com:7001/eureka

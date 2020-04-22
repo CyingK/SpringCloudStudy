@@ -6,13 +6,30 @@ spring:
     name: Gateway
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allow-credentials: true
+            allowed-origins:
+              - "null"
+            allowed-headers: "*"
+            allowed-methods:
+              - GET
+      discovery:
+        locator:
+          enabled: true
       routes:
         - id: payment_route1
-          uri: http://Cying.com:8001
+#          uri: http://Cying.com:8002
+          uri: lb://PAYMENT
           predicates:
             - Path=/payment/get/**
+#            - After=2020-04-22T20:10:58.763+08:00[Asia/Shanghai]
+#            - Cookie=username,cying
+#            - Header=X-Id, \d+
         - id: payment_route2
-          uri: http://Cying.com:8001
+#          uri: http://Cying.com:8002
+          uri: lb://PAYMENT
           predicates:
             - Path=/payment/sleep
 

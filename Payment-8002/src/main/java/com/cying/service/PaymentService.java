@@ -10,13 +10,15 @@ import javax.annotation.Resource;
 public class PaymentService{
 
     @Resource
-    private PaymentDao dao;
+    public PaymentDao dao;
 
     public int create(Payment payment) {
+        System.out.println(dao);
         return dao.create(payment);
     }
 
     public Payment getPaymentById(Long id) {
+        System.out.println(dao);
         return dao.getPaymentById(id);
     }
 }

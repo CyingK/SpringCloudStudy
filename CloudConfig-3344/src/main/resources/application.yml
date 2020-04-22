@@ -1,0 +1,20 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: Cloud-Config-Center
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:CyingK/springcloud-config.git
+          search-paths:
+            - springcloud-config
+      label: master
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://Cying.com:7001/eureka
