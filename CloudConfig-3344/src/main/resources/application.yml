@@ -12,9 +12,21 @@ spring:
           search-paths:
             - springcloud-config
       label: master
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
       defaultZone: http://Cying.com:7001/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"

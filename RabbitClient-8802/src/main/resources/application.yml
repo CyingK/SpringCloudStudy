@@ -1,0 +1,29 @@
+server:
+  port: 8802
+
+spring:
+  application:
+    name: Stream-Client
+  cloud:
+    consul:
+      host: Cying.com
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+    stream:
+      binders:
+        myRabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: Cying.com
+                port: 5672
+                username: guest
+                password: guest
+      bindings:
+        input:
+          destination: myExchange
+          content-type: application/json
+          binder: myRabbit
+          group: cyingOrg

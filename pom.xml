@@ -23,8 +23,12 @@
     <module>OpenFeignOrder-80</module>
     <module>HystrixDashBoard-9001</module>
     <module>Gateway-9527</module>
-      <module>CloudConfig-3344</module>
+    <module>CloudConfig-3344</module>
     <module>CloudConfigClient-4455</module>
+    <module>CloudConfigClient-5566</module>
+    <module>RabbitProvider-8801</module>
+    <module>RabbitClient-8802</module>
+    <module>RabbitClient-8803</module>
   </modules>
   <packaging>pom</packaging>
 
