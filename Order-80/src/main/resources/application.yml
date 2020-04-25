@@ -4,12 +4,18 @@ server:
 spring:
   application:
     name: Order
+  zipkin:
+    base-url: http://Cying.com:9411
+  sleuth:
+    sampler:
+      probability: 1
 
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://cying.com:7001/eureka,http://cying.com:7002/eureka
+#      defaultZone: http://cying.com:7001/eureka,http://cying.com:7002/eureka
+      defaultZone: http://cying.com:7001/eureka
   instance:
     instance-id: order-80

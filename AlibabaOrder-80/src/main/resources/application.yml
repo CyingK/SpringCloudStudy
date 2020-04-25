@@ -1,0 +1,13 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: Alibaba-Order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: Cying.com:8848
+
+service-url:
+  nacos-user-service: http://Alibaba-Payment-Provider

@@ -1,0 +1,16 @@
+server:
+  port: 3377
+
+spring:
+  application:
+    name: Alibaba-Config-Client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: Cying.com:8848
+      config:
+        server-addr: Cying.com:8848
+        file-extension: yaml
+        group: MYCONFIG
+        namespace: 7432126a-20ca-4d7e-a6e9-69bb531abe62
+        prefix: MyConfig
