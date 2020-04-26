@@ -29,10 +29,11 @@
     <module>RabbitProvider-8801</module>
     <module>RabbitClient-8802</module>
     <module>RabbitClient-8803</module>
-      <module>AlibabaProvider-9001</module>
+    <module>AlibabaProvider-9001</module>
     <module>AlibabaProvider-9002</module>
     <module>AlibabaOrder-80</module>
-      <module>AlibabaConfigClient-3377</module>
+    <module>AlibabaConfigClient-3377</module>
+    <module>AlibabaSentiProvider-8401</module>
   </modules>
   <packaging>pom</packaging>
 
