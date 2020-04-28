@@ -1,0 +1,16 @@
+server:
+  port: 9003
+
+spring:
+  application:
+    name: Sentinel-Provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: cying.com:8848
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

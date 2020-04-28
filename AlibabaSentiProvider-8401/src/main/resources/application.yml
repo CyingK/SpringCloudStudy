@@ -12,9 +12,29 @@ spring:
       transport:
         dashboard: Cying.com:1314
         port: 8719
+      datasource:
+        db:
+          nacos:
+            server-addr: Cying.com:8848
+            dataId: SENTINEL-PROVIDER
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+#  [
+#    {
+#      "resource": "/limite",      //资源名
+#      "limiteApp": "default",     //针对来源
+#      "grade": 1,                 //阈值类型，0 - 线程数，1 - QPS
+#      "count": 1,                 //单机阈值
+#      "strategy": 0,              //流控模式，0 - 直接，1 - 关联，2 - 链路
+#      "controlBehavior": 0,       //流控效果，0 - 快速失败，1 - Warm up，2 - 排队等待
+#      "clusterMode": false        //是否集群
+#    }
+#  ]
